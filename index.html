@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lista de Compras — Cyber</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Lista de Compras</h1>
+  </header>
+
+  <main class="app">
+    <section class="panel">
+      <form id="form" class="input-row" autocomplete="off">
+        <input id="item-input" type="text" placeholder="Adicionar item..." aria-label="Adicionar item" required />
+        <button id="add-btn" type="submit">Adicionar</button>
+      </form>
+
+      <div class="stats-mini">
+        <div class="stat-item">
+          <span class="stat-label">Total:</span>
+          <span id="stat-total" class="stat-value">0</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Não comprados:</span>
+          <span id="stat-unpurchased" class="stat-value stat-unpurchased">0</span>
+          <span id="stat-unpurchased-pct" class="stat-pct stat-unpurchased">0%</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Comprados:</span>
+          <span id="stat-purchased" class="stat-value stat-purchased">0</span>
+          <span id="stat-purchased-pct" class="stat-pct stat-purchased">0%</span>
+        </div>
+      </div>
+
+      <ul id="list" class="items" aria-live="polite"></ul>
+
+      <div class="actions">
+        <button id="clear-btn" class="btn-muted">Limpar tudo</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
